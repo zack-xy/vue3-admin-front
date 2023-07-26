@@ -7,6 +7,8 @@ import 'element-plus/dist/index.css'
 import '@/style/index.scss'
 import installIcons from '@/icons'
 
+import './permission'
+
 const app = createApp(App)
 installIcons(app)
 app.use(store)
