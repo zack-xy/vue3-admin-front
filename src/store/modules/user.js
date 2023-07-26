@@ -21,7 +21,7 @@ export default {
           username,
           password: md5(password)
         }).then(data => {
-          this.commit('user/setToken', data.data.data.token)
+          this.commit('user/setToken', data.token)
           resolve(data)
         }).catch(err => {
           reject(err)
