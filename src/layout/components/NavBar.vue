@@ -11,15 +11,15 @@ import { ref } from 'vue';
             <Tools />
           </el-icon>
         </div>
-        <template #dropdrown>
-          <el-dropdown-menu class="user-dropdown ">
+        <template #dropdown>
+          <el-dropdown-menu class="user-dropdown">
             <router-link to="/">
               <el-dropdown-item>主页</el-dropdown-item>
             </router-link>
             <a target="_blank" href="#">
               <el-dropdown-item>课程主页</el-dropdown-item>
             </a>
-            <el-dropdown-item divided>退出登陆 </el-dropdown-item>
+            <el-dropdown-item divided @click="logout">退出登陆</el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
@@ -29,6 +29,11 @@ import { ref } from 'vue';
 
 <script setup>
 import { Tools } from '@element-plus/icons-vue'
+import { useStore } from 'vuex'
+const store = useStore()
+const logout = () => {
+  store.dispatch('user/logout')
+}
 </script>
 
 <style lang="scss" scoped>
