@@ -20,11 +20,14 @@ service.interceptors.request.use(config => {
 // 响应拦截器
 service.interceptors.response.use(
   response => {
-    const { success, message, data } = response.data
+    const { success, message, data, code } = response.data
     if (success) {
       return data
     } else {
       showMessage(message, 'error')
+      if (code === 401) {
+        store.dispatch('user/logout')
+      }
       return Promise.reject(new Error(message))
     }
   },
