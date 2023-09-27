@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { showMessage } from '@/utils/tools'
 import store from '@/store'
+import { isCheckTimeout } from '@/utils/auth'
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
@@ -10,6 +11,10 @@ const service = axios.create({
 // 请求拦截器
 service.interceptors.request.use(config => {
   if (store.getters.token) {
+    if (isCheckTimeout()) {
+      store.dispatch('user/logout')
+      return Promise.reject(new Error('token已经失效，请重新登陆'))
+    }
     config.headers.Authorization = `Bearer ${store.getters.token}`
   }
   return config
@@ -25,7 +30,7 @@ service.interceptors.response.use(
       return data
     } else {
       showMessage(message, 'error')
-      if (code === 401) {
+      if (code === 401) { // 标识服务端token失效
         store.dispatch('user/logout')
       }
       return Promise.reject(new Error(message))

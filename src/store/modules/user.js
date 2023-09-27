@@ -3,6 +3,7 @@ import md5 from 'md5'
 import { setItem, getItem, removeAllItem } from '@/utils/storage'
 import { TOKEN } from '@/constant'
 import router from '@/router'
+import { setTimeStamp } from '@/utils/auth'
 export default {
   namespaced: true,
   state: () => ({
@@ -28,6 +29,7 @@ export default {
         }).then(data => {
           this.commit('user/setToken', data.token)
           router.push('/')
+          setTimeStamp()
           resolve(data)
         }).catch(err => {
           reject(err)
