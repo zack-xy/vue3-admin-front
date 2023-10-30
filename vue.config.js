@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 const path = require('path')
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 function resolve (dir) {
   return path.join(__dirname, dir)
 }
@@ -17,6 +18,9 @@ module.exports = defineConfig({
         }
       }
     }
+  },
+  configureWebpack: {
+    plugins: [new NodePolyfillPlugin()]
   },
   chainWebpack (config) {
     // 设置svg-sprite-loader
