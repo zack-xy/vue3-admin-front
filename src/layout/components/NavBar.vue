@@ -1,6 +1,7 @@
 <template>
   <div class="navbar">
-    <hamburger />
+    <Hamburger />
+    <Breadcrumb class="bread-container"/>
     <div class="right-menu">
       <!-- 头像 -->
       <el-dropdown class="avatar-container" trigger="click">
@@ -31,6 +32,7 @@
 import { Tools } from '@element-plus/icons-vue'
 import { useStore } from 'vuex'
 import Hamburger from '@/components/hamburger/index'
+import Breadcrumb from '@/components/Breadcrumb/index'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')
@@ -63,6 +65,10 @@ const logout = () => {
   align-items: center;
   float: right;
   padding-right: 16px;
+}
+
+.bread-container {
+  float: left;
 }
 
 ::v-deep .avatar-container {
