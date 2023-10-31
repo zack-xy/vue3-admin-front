@@ -1,7 +1,10 @@
-import { ref } from 'vue';
 <template>
   <div class="navbar">
+    <Hamburger />
+    <Breadcrumb class="bread-container"/>
     <div class="right-menu">
+      <!-- 语言切换 -->
+      <lang-select class="right-menu-item hover-effect"></lang-select>
       <!-- 头像 -->
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
@@ -30,6 +33,9 @@ import { ref } from 'vue';
 <script setup>
 import { Tools } from '@element-plus/icons-vue'
 import { useStore } from 'vuex'
+import Hamburger from '@/components/hamburger/index'
+import Breadcrumb from '@/components/Breadcrumb/index'
+import LangSelect from '@/components/LangSelect/index'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')
@@ -45,22 +51,49 @@ const logout = () => {
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 }
 
+.hamburger-container {
+  line-height: 46px;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+  transition: background 0.5s;
+
+  &:hover {
+    background: rgba(0,0,0,0.1);
+  }
+}
+
 .right-menu {
   display: flex;
   align-items: center;
   float: right;
   padding-right: 16px;
-}
 
-::v-deep .avatar-container {
-  cursor: pointer;
-  .avatar-wrapper {
-    margin-top: 5px;
-    position: relative;
-    .el-avatar {
-      --el-avatar-background-color: none;
-      margin-right: 12px ;
+  ::v-deep .right-menu-item {
+    display: inline-block;
+    padding: 0 18px 0 0;
+    font-size: 24px;
+    color: #5a5e66;
+    vertical-align: text-bottom;
+    &.hover-effect {
+      cursor: pointer;
     }
   }
+
+  ::v-deep .avatar-container {
+    cursor: pointer;
+    .avatar-wrapper {
+      margin-top: 5px;
+      position: relative;
+      .el-avatar {
+        --el-avatar-background-color: none;
+        margin-right: 12px ;
+      }
+    }
+  }
+}
+
+.bread-container {
+  float: left;
 }
 </style>
