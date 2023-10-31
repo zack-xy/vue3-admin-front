@@ -22,10 +22,10 @@ const toggleClick = () => {
 .hamburger-container {
   padding: 0 16px;
   .hamburger {
-    font-size: 35px;
+    font-size: 30px;
     display: inline-block;
     vertical-align: middle;
-    width: 35px;
+    width: 30px;
     height: 46px;
   }
 }

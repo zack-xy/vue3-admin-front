@@ -3,3 +3,5 @@ export const TOKEN = 'token'
 export const TIME_STAMP = 'timeStamp'
 // 超时时长(30分钟的ms值)
 export const TOKEN_TIMEOUT_VALUE = 30 * 60 * 1000
+// 国际化
+export const LANG = 'language'

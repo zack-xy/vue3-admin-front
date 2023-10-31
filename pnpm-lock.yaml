@@ -29,6 +29,7 @@ specifiers:
   sass-loader: ^12.0.0
   svg-sprite-loader: 6.0.9
   vue: ^3.2.13
+  vue-i18n: ^9.6.2
   vue-router: ^4.0.3
   vuex: ^4.0.0
 
@@ -40,6 +41,7 @@ dependencies:
   md5: 2.3.0
   node-polyfill-webpack-plugin: 2.0.1
   vue: 3.3.4
+  vue-i18n: 9.6.2_vue@3.3.4
   vue-router: 4.2.4_vue@3.3.4
   vuex: 4.1.0_vue@3.3.4
 
@@ -1584,6 +1586,27 @@ packages:
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
+
+  /@intlify/core-base/9.6.2:
+    resolution: {integrity: sha512-ci0j2nbEL/pamvqgcCqyIVeQ3LS41F1IRqI5rCBNnpSp0FjNnH8bpha8R3OifkhqatzlP4wGOuN/UqfLYVDv7g==}
+    engines: {node: '>= 16'}
+    dependencies:
+      '@intlify/message-compiler': 9.6.2
+      '@intlify/shared': 9.6.2
+    dev: false
+
+  /@intlify/message-compiler/9.6.2:
+    resolution: {integrity: sha512-kgZQL9zeJDeEB5vvD93Y++HvFUELnT48PjnpfCcF3EJaLLVs9he8IzODiNK42Z40lWbFyja0SXJZjsalybQygA==}
+    engines: {node: '>= 16'}
+    dependencies:
+      '@intlify/shared': 9.6.2
+      source-map-js: 1.0.2
+    dev: false
+
+  /@intlify/shared/9.6.2:
+    resolution: {integrity: sha512-9KBcXmJNxElp7QMnU8V0/tScTOitDqyFi4HceEZqJyyDkMi8K5DBPMTIuXIAMmtMlXpe/nj5pke7tRw97VeQRA==}
+    engines: {node: '>= 16'}
+    dev: false
 
   /@jridgewell/gen-mapping/0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -9529,6 +9552,18 @@ packages:
   /vue-hot-reload-api/2.3.4:
     resolution: {integrity: sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==}
     dev: true
+
+  /vue-i18n/9.6.2_vue@3.3.4:
+    resolution: {integrity: sha512-J43grTQjPR8LCUxvx3mkoM+11xhTnej1Al4lvJCEeKmQqf8eqbuYPQb54HXnEg/UzZyaxLBAwPAUTbrZ8V7hcg==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@intlify/core-base': 9.6.2
+      '@intlify/shared': 9.6.2
+      '@vue/devtools-api': 6.5.0
+      vue: 3.3.4
+    dev: false
 
   /vue-loader/15.10.1_ocbys7ce66fpdiff66h5qq34tq:
     resolution: {integrity: sha512-SaPHK1A01VrNthlix6h1hq4uJu7S/z0kdLUb6klubo738NeQoLbS6V9/d8Pv19tU0XdQKju3D1HSKuI8wJ5wMA==}
