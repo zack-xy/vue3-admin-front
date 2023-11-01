@@ -40,7 +40,7 @@ const i18n = useI18n()
 const handleSetLanguage = lang => {
   i18n.locale.value = lang
   store.commit('app/setLanguage', lang)
-  showMessage('更新成功', 'success')
+  showMessage(i18n.t('msg.toast.switchLangSuccess'), 'success')
 }
 </script>
 
