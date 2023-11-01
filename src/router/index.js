@@ -21,7 +21,7 @@ const publicRoutes = [
         component: () => import('@/views/profile/index'),
         meta: {
           title: 'profile',
-          icon: 'yonghu'
+          icon: 'profile'
         }
       },
       // 404
@@ -51,7 +51,7 @@ const privateRoutes = [
     redirect: '/user/manage',
     meta: {
       title: 'user',
-      icon: 'yonghu'
+      icon: 'user-circle'
     },
     children: [
       {
@@ -60,7 +60,7 @@ const privateRoutes = [
         component: () => import('@/views/userManage/index'),
         meta: {
           title: 'userManage',
-          icon: 'yonghu'
+          icon: 'users'
         }
       },
       {
@@ -69,7 +69,7 @@ const privateRoutes = [
         component: () => import('@/views/roleList/index'),
         meta: {
           title: 'roleList',
-          icon: 'yonghu'
+          icon: 'role'
         }
       },
       {
@@ -78,7 +78,7 @@ const privateRoutes = [
         component: () => import('@/views/permissionList/index'),
         meta: {
           title: 'permissionList',
-          icon: 'yonghu'
+          icon: 'permission'
         }
       },
       {
@@ -87,7 +87,7 @@ const privateRoutes = [
         component: () => import('@/views/userInfo/index'),
         meta: {
           title: 'userInfo',
-          icon: 'yonghu'
+          icon: 'user-info'
         }
       },
       {
@@ -96,7 +96,7 @@ const privateRoutes = [
         component: () => import('@/views/import/index'),
         meta: {
           title: 'excelImport',
-          icon: 'yonghu'
+          icon: 'excel-import'
         }
       }
     ]
@@ -107,7 +107,7 @@ const privateRoutes = [
     redirect: '/article/ranking',
     meta: {
       title: 'article',
-      icon: 'yonghu'
+      icon: 'article'
     },
     children: [
       {
@@ -116,7 +116,7 @@ const privateRoutes = [
         component: () => import('@/views/articleRanking/index'),
         meta: {
           title: 'articleRanking',
-          icon: 'yonghu'
+          icon: 'ranking'
         }
       },
       {
@@ -133,7 +133,7 @@ const privateRoutes = [
         component: () => import('@/views/articleCreate/index'),
         meta: {
           title: 'articleCreate',
-          icon: 'yonghu'
+          icon: 'article-create'
         }
       },
       {

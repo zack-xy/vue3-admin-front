@@ -8,18 +8,17 @@
       <el-form-item prop="username">
         <span class="svg-container">
           <!-- <svg-icon icon="https://res.lgdsunday.club/user.svg"/> -->
-          <svg-icon icon="yonghu"/>
+          <svg-icon icon="profile"/>
         </span>
         <el-input v-model="loginForm.username" placeholder="请输入用户名" name="username" type="text"></el-input>
       </el-form-item>
       <el-form-item prop="password">
         <span class="svg-container">
-            <svg-icon icon="mima"/>
+            <svg-icon icon="password"/>
         </span>
         <el-input v-model="loginForm.password " placeholder="请输入密码" name="password" :type="passwordType"></el-input>
         <span class="show-pwd" @click="onChangePwdType">
-          <svg-icon :icon="passwordType === 'password'? 'biyanjing': 'yanjing'"/>
-          <!-- <svg-icon icon="biyanjing"/> -->
+          <svg-icon :icon="passwordType === 'password'? 'close-eye': 'open-eye'"/>
         </span>
       </el-form-item>
       <el-button class="login-btn" type="primary" :loading="loading" @click="handleLogin">{{$t('msg.login.loginBtn')}}</el-button>

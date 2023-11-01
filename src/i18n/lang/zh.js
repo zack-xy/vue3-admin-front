@@ -42,6 +42,8 @@ export default {
   navBar: {
     home: '主页',
     website: '我的网站',
-    logout: '退出登陆'
+    logout: '退出登陆',
+    themeChange: '主题更换',
+    themeColorChange: '主题色切换'
   }
 }

@@ -41,6 +41,8 @@ export default {
   navBar: {
     home: 'Home',
     website: 'My Website',
-    logout: 'logout'
+    logout: 'logout',
+    themeChange: 'Theme Change',
+    themeColorChange: 'Toggle Theme Color'
   }
 }
