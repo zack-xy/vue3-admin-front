@@ -3,8 +3,10 @@
     <Hamburger />
     <Breadcrumb class="bread-container"/>
     <div class="right-menu">
+      <!-- 主题颜色切换 -->
+      <theme-select class="right-menu-item hover-effect" />
       <!-- 语言切换 -->
-      <lang-select class="right-menu-item hover-effect"></lang-select>
+      <lang-select class="right-menu-item hover-effect" />
       <!-- 头像 -->
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
@@ -17,12 +19,12 @@
         <template #dropdown>
           <el-dropdown-menu class="user-dropdown">
             <router-link to="/">
-              <el-dropdown-item>主页</el-dropdown-item>
+              <el-dropdown-item>{{$t('msg.navBar.home')}}</el-dropdown-item>
             </router-link>
             <a target="_blank" href="https://zack-xy.github.io/knownNet/">
-              <el-dropdown-item>我的网站</el-dropdown-item>
+              <el-dropdown-item>{{$t('msg.navBar.website')}}</el-dropdown-item>
             </a>
-            <el-dropdown-item divided @click="logout">退出登陆</el-dropdown-item>
+            <el-dropdown-item divided @click="logout">{{$t('msg.navBar.logout')}}</el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
@@ -36,6 +38,7 @@ import { useStore } from 'vuex'
 import Hamburger from '@/components/hamburger/index'
 import Breadcrumb from '@/components/Breadcrumb/index'
 import LangSelect from '@/components/LangSelect/index'
+import ThemeSelect from '@/components/ThemeSelect/index'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')

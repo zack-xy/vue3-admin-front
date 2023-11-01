@@ -2,26 +2,30 @@
   <div class="login-container">
     <el-form class="login-form" ref="loginFormRef" :model="loginForm" :rules="loginRules">
       <div class="title-container">
-        <h3 class="title">用户登陆</h3>
+        <h3 class="title">{{$t('msg.login.title')}}</h3>
+        <lang-select class="lang-select" />
       </div>
       <el-form-item prop="username">
         <span class="svg-container">
           <!-- <svg-icon icon="https://res.lgdsunday.club/user.svg"/> -->
-          <svg-icon icon="yonghu"/>
+          <svg-icon icon="profile"/>
         </span>
         <el-input v-model="loginForm.username" placeholder="请输入用户名" name="username" type="text"></el-input>
       </el-form-item>
       <el-form-item prop="password">
         <span class="svg-container">
-            <svg-icon icon="mima"/>
+            <svg-icon icon="password"/>
         </span>
         <el-input v-model="loginForm.password " placeholder="请输入密码" name="password" :type="passwordType"></el-input>
         <span class="show-pwd" @click="onChangePwdType">
-          <svg-icon :icon="passwordType === 'password'? 'biyanjing': 'yanjing'"/>
-          <!-- <svg-icon icon="biyanjing"/> -->
+          <svg-icon :icon="passwordType === 'password'? 'close-eye': 'open-eye'"/>
         </span>
       </el-form-item>
-      <el-button class="login-btn" type="primary" :loading="loading" @click="handleLogin">登陆</el-button>
+      <el-button class="login-btn" type="primary" :loading="loading" @click="handleLogin">{{$t('msg.login.loginBtn')}}</el-button>
+
+      <div class="tips" v-html="$t('msg.login.desc')">
+
+      </div>
     </el-form>
   </div>
 </template>
@@ -30,13 +34,16 @@
 import { ref } from 'vue'
 import { validatePassword } from './rules'
 import { useStore } from 'vuex'
+import LangSelect from '@/components/LangSelect/index'
+import { useI18n } from 'vue-i18n'
+const i18n = useI18n()
 const loginForm = ref({
   username: 'super-admin',
   password: '123456'
 })
 const loginRules = ref({
   username: [
-    { required: true, trigger: 'blur', message: '请输入用户名' }
+    { required: true, trigger: 'blur', message: i18n.t('msg.login.usernameRule') }
   ],
   password: [
     { required: true, trigger: 'blur', validator: validatePassword() }
@@ -120,6 +127,11 @@ $cursor: #fff;
       width: 100%;
       margin-bottom: 30px;
     }
+    .tips {
+      font-size: 16px;
+      color: white;
+      line-height: 24px;
+    }
   }
 
   .svg-container {
@@ -149,6 +161,16 @@ $cursor: #fff;
      color: $dark_gray;
      cursor: pointer;
      user-select: none;
+  }
+  .lang-select {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    background-color: #fff;
+    font-size: 22px;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
   }
 }
 </style>
