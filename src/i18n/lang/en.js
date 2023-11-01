@@ -36,8 +36,11 @@ export default {
     switchLangSuccess: 'Language changed!'
   },
   tagsView: {},
-  theme: {},
-  universal: {},
+  universal: {
+    title: 'remind',
+    confirm: 'comfirm',
+    cancel: 'cancel'
+  },
   navBar: {
     home: 'Home',
     website: 'My Website',
