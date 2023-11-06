@@ -38,7 +38,11 @@ export default {
   },
   tagsView: {},
   theme: {},
-  universal: {},
+  universal: {
+    title: '提示',
+    confirm: '确认',
+    cancel: '取消'
+  },
   navBar: {
     home: '主页',
     website: '我的网站',
