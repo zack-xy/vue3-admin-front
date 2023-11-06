@@ -18,6 +18,7 @@
 <script setup>
 import { defineProps, ref, defineEmits } from 'vue'
 import { useStore } from 'vuex'
+import { generateNewStyle, writeNewStyle } from '@/utils/theme'
 
 defineProps({
   modelValue: {
@@ -50,7 +51,9 @@ const predefineColors = [
 const closed = () => {
   emits('update:modelValue', false)
 }
-const confirm = () => {
+const confirm = async () => {
+  const newStyle = await generateNewStyle(color.value)
+  writeNewStyle(newStyle)
   closed()
   store.commit('theme/setMainColor', color.value)
 }
