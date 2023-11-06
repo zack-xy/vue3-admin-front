@@ -17,6 +17,8 @@
 
 <script setup>
 import { defineProps, ref, defineEmits } from 'vue'
+import { useStore } from 'vuex'
+
 defineProps({
   modelValue: {
     type: Boolean,
@@ -25,8 +27,9 @@ defineProps({
 })
 
 const emits = defineEmits(['update:modelValue'])
+const store = useStore()
 
-const color = ref('#00ff00')
+const color = ref(store.getters.mainColor)
 const predefineColors = [
   '#ff4500',
   '#ff8c00',
@@ -49,6 +52,7 @@ const closed = () => {
 }
 const confirm = () => {
   closed()
+  store.commit('theme/setMainColor', color.value)
 }
 </script>
 
