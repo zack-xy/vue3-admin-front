@@ -29,6 +29,7 @@
     "md5": "^2.3.0",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "rgb-hex": "^4.1.0",
+    "screenfull": "^6.0.2",
     "vue": "^3.2.13",
     "vue-i18n": "^9.6.2",
     "vue-router": "^4.0.3",

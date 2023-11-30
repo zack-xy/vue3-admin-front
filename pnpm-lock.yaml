@@ -29,6 +29,7 @@ specifiers:
   rgb-hex: ^4.1.0
   sass: ^1.32.7
   sass-loader: ^12.0.0
+  screenfull: ^6.0.2
   svg-sprite-loader: 6.0.9
   vue: ^3.2.13
   vue-i18n: ^9.6.2
@@ -44,6 +45,7 @@ dependencies:
   md5: 2.3.0
   node-polyfill-webpack-plugin: 2.0.1
   rgb-hex: 4.1.0
+  screenfull: 6.0.2
   vue: 3.3.4
   vue-i18n: 9.6.2_vue@3.3.4
   vue-router: 4.2.4_vue@3.3.4
@@ -8476,6 +8478,11 @@ packages:
       ajv-formats: 2.1.1
       ajv-keywords: 5.1.0_ajv@8.12.0
     dev: true
+
+  /screenfull/6.0.2:
+    resolution: {integrity: sha512-AQdy8s4WhNvUZ6P8F6PB21tSPIYKniic+Ogx0AacBMjKP1GUHN2E9URxQHtCusiwxudnCKkdy4GrHXPPJSkCCw==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dev: false
 
   /select-hose/2.0.0:
     resolution: {integrity: sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==}
