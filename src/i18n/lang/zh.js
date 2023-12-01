@@ -36,7 +36,11 @@ export default {
   toast: {
     switchLangSuccess: '语言已切换！'
   },
-  tagsView: {},
+  tagsView: {
+    refresh: '刷新',
+    closeRight: '关闭右侧',
+    closeOther: '关闭其他'
+  },
   theme: {},
   universal: {
     title: '提示',

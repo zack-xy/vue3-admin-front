@@ -35,7 +35,11 @@ export default {
   toast: {
     switchLangSuccess: 'Language changed!'
   },
-  tagsView: {},
+  tagsView: {
+    refresh: 'refresh',
+    closeRight: 'close right',
+    closeOther: 'close other'
+  },
   universal: {
     title: 'remind',
     confirm: 'comfirm',
