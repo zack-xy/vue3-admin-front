@@ -52,6 +52,30 @@ export default {
     website: '我的网站',
     logout: '退出登陆',
     themeChange: '主题更换',
-    themeColorChange: '主题色切换'
+    themeColorChange: '主题色切换',
+    guide: '导航'
+  },
+  guide: {
+    close: '关闭',
+    next: '下一个',
+    prev: '上一个',
+    guideTitle: '导航',
+    guideDesc: '功能引导',
+    hamurgerTitle: '汉堡按钮',
+    hamurgerDesc: '汉堡按钮功能',
+    breadcrumbTitle: '面包屑',
+    breadcrumbDesc: '面包屑功能描述',
+    searchTitle: '查询',
+    searchDesc: '查询功能描述',
+    fullTitle: '全屏',
+    fullDesc: '全屏功能描述',
+    themeTitle: '主题',
+    themeDesc: '主题切换',
+    langTitle: '语言',
+    langDesc: '语言切换',
+    tagTitle: '标签',
+    tagDesc: '标签功能',
+    sidebarTitle: '侧边栏',
+    sidebarDesc: '侧边栏功能'
   }
 }

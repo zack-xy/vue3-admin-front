@@ -10,7 +10,7 @@
       <div class="fixed-header">
         <!--顶部navbar-->
         <NavBar />
-        <tags-view />
+        <tags-view id="guide-tags"/>
       </div>
       <!--内容区-->
       <AppMain />

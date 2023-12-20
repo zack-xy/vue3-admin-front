@@ -50,6 +50,30 @@ export default {
     website: 'My Website',
     logout: 'logout',
     themeChange: 'Theme Change',
-    themeColorChange: 'Toggle Theme Color'
+    themeColorChange: 'Toggle Theme Color',
+    guide: 'guide'
+  },
+  guide: {
+    close: 'close',
+    next: 'next',
+    prev: 'prev',
+    guideTitle: 'guide title',
+    guideDesc: 'guide desc',
+    hamurgerTitle: 'hamurger title',
+    hamurgerDesc: 'hamurger desc',
+    breadcrumbTitle: 'breadcrumb title',
+    breadcrumbDesc: 'breadcrumb desc',
+    searchTitle: 'search title',
+    searchDesc: 'search desc',
+    fullTitle: 'full title',
+    fullDesc: 'full desc',
+    themeTitle: 'theme title',
+    themeDesc: 'theme desc',
+    langTitle: 'lang title',
+    langDesc: 'lang desc',
+    tagTitle: 'tag title',
+    tagDesc: 'tag desc',
+    sidebarTitle: 'sidebar title',
+    sidebarDesc: 'sidebar desc'
   }
 }
