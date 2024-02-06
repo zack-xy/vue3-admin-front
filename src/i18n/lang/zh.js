@@ -77,5 +77,17 @@ export default {
     tagDesc: '标签功能',
     sidebarTitle: '侧边栏',
     sidebarDesc: '侧边栏功能'
+  },
+  profile: {
+    name: 'zack',
+    job: '前端工程师',
+    feature: '功能',
+    chapter: '章节',
+    author: '作者',
+    inroduce: '介绍',
+    projectIntroduction: '项目介绍',
+    muted: '基于Vue3和element ui的前端admin',
+    projectFunction: '项目功能',
+    introduction: '一个菜鸟前端'
   }
 }

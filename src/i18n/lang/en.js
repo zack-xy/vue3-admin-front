@@ -75,5 +75,17 @@ export default {
     tagDesc: 'tag desc',
     sidebarTitle: 'sidebar title',
     sidebarDesc: 'sidebar desc'
+  },
+  profile: {
+    name: 'name',
+    job: 'job',
+    feature: 'feature',
+    chapter: 'chapter',
+    author: 'author',
+    inroduce: 'inroduce',
+    projectIntroduction: 'project introduction',
+    muted: 'vue3 admin front',
+    projectFunction: 'project functions',
+    introduction: 'introduction'
   }
 }
