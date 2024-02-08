@@ -89,5 +89,20 @@ export default {
     muted: '基于Vue3和element ui的前端admin',
     projectFunction: '项目功能',
     introduction: '一个菜鸟前端'
+  },
+  excel: {
+    importExcel: '导入Excel',
+    exportExcel: '导出Excel',
+    name: '姓名',
+    mobile: '手机号',
+    avatar: '头像',
+    role: '角色',
+    defaultRole: '未知角色',
+    openTime: '开通时间',
+    nowTime: '当前时间',
+    action: '操作',
+    show: '查看',
+    showRole: '角色',
+    remove: '删除'
   }
 }

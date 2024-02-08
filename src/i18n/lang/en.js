@@ -87,5 +87,20 @@ export default {
     muted: 'vue3 admin front',
     projectFunction: 'project functions',
     introduction: 'introduction'
+  },
+  excel: {
+    importExcel: 'import excel',
+    exportExcel: 'export excel',
+    name: 'name',
+    mobile: 'mobile',
+    avatar: 'avatar',
+    role: 'role',
+    defaultRole: 'default role',
+    openTime: 'open time',
+    nowTime: 'now time',
+    action: 'action',
+    show: 'show',
+    showRole: 'show role',
+    remove: 'remove'
   }
 }
