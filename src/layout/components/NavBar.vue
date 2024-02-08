@@ -1,10 +1,12 @@
 <template>
   <div class="navbar">
     <Hamburger />
-    <Breadcrumb class="bread-container"/>
+    <Breadcrumb id="guide-breadcrumb" class="bread-container"/>
     <div class="right-menu">
+      <!-- 指引 -->
+      <guide class="right-menu-item hover-effect" />
       <!-- 搜索功能 -->
-      <header-search class="right-menu-item hover-effect" />
+      <header-search id="guide-search" class="right-menu-item hover-effect" />
       <!-- 全屏切换 -->
       <screen-full class="right-menu-item hover-effect" />
       <!-- 主题颜色切换 -->
@@ -45,6 +47,7 @@ import LangSelect from '@/components/LangSelect/index'
 import ThemeSelect from '@/components/ThemeSelect/index'
 import ScreenFull from '@/components/ScreenFull/index'
 import HeaderSearch from '@/components/HeaderSearch/index'
+import Guide from '@/components/Guide/index'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')

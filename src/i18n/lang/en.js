@@ -35,7 +35,11 @@ export default {
   toast: {
     switchLangSuccess: 'Language changed!'
   },
-  tagsView: {},
+  tagsView: {
+    refresh: 'refresh',
+    closeRight: 'close right',
+    closeOther: 'close other'
+  },
   universal: {
     title: 'remind',
     confirm: 'comfirm',
@@ -46,6 +50,57 @@ export default {
     website: 'My Website',
     logout: 'logout',
     themeChange: 'Theme Change',
-    themeColorChange: 'Toggle Theme Color'
+    themeColorChange: 'Toggle Theme Color',
+    guide: 'guide'
+  },
+  guide: {
+    close: 'close',
+    next: 'next',
+    prev: 'prev',
+    guideTitle: 'guide title',
+    guideDesc: 'guide desc',
+    hamurgerTitle: 'hamurger title',
+    hamurgerDesc: 'hamurger desc',
+    breadcrumbTitle: 'breadcrumb title',
+    breadcrumbDesc: 'breadcrumb desc',
+    searchTitle: 'search title',
+    searchDesc: 'search desc',
+    fullTitle: 'full title',
+    fullDesc: 'full desc',
+    themeTitle: 'theme title',
+    themeDesc: 'theme desc',
+    langTitle: 'lang title',
+    langDesc: 'lang desc',
+    tagTitle: 'tag title',
+    tagDesc: 'tag desc',
+    sidebarTitle: 'sidebar title',
+    sidebarDesc: 'sidebar desc'
+  },
+  profile: {
+    name: 'name',
+    job: 'job',
+    feature: 'feature',
+    chapter: 'chapter',
+    author: 'author',
+    inroduce: 'inroduce',
+    projectIntroduction: 'project introduction',
+    muted: 'vue3 admin front',
+    projectFunction: 'project functions',
+    introduction: 'introduction'
+  },
+  excel: {
+    importExcel: 'import excel',
+    exportExcel: 'export excel',
+    name: 'name',
+    mobile: 'mobile',
+    avatar: 'avatar',
+    role: 'role',
+    defaultRole: 'default role',
+    openTime: 'open time',
+    nowTime: 'now time',
+    action: 'action',
+    show: 'show',
+    showRole: 'show role',
+    remove: 'remove'
   }
 }

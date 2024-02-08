@@ -36,7 +36,11 @@ export default {
   toast: {
     switchLangSuccess: '语言已切换！'
   },
-  tagsView: {},
+  tagsView: {
+    refresh: '刷新',
+    closeRight: '关闭右侧',
+    closeOther: '关闭其他'
+  },
   theme: {},
   universal: {
     title: '提示',
@@ -48,6 +52,57 @@ export default {
     website: '我的网站',
     logout: '退出登陆',
     themeChange: '主题更换',
-    themeColorChange: '主题色切换'
+    themeColorChange: '主题色切换',
+    guide: '导航'
+  },
+  guide: {
+    close: '关闭',
+    next: '下一个',
+    prev: '上一个',
+    guideTitle: '导航',
+    guideDesc: '功能引导',
+    hamurgerTitle: '汉堡按钮',
+    hamurgerDesc: '汉堡按钮功能',
+    breadcrumbTitle: '面包屑',
+    breadcrumbDesc: '面包屑功能描述',
+    searchTitle: '查询',
+    searchDesc: '查询功能描述',
+    fullTitle: '全屏',
+    fullDesc: '全屏功能描述',
+    themeTitle: '主题',
+    themeDesc: '主题切换',
+    langTitle: '语言',
+    langDesc: '语言切换',
+    tagTitle: '标签',
+    tagDesc: '标签功能',
+    sidebarTitle: '侧边栏',
+    sidebarDesc: '侧边栏功能'
+  },
+  profile: {
+    name: 'zack',
+    job: '前端工程师',
+    feature: '功能',
+    chapter: '章节',
+    author: '作者',
+    inroduce: '介绍',
+    projectIntroduction: '项目介绍',
+    muted: '基于Vue3和element ui的前端admin',
+    projectFunction: '项目功能',
+    introduction: '一个菜鸟前端'
+  },
+  excel: {
+    importExcel: '导入Excel',
+    exportExcel: '导出Excel',
+    name: '姓名',
+    mobile: '手机号',
+    avatar: '头像',
+    role: '角色',
+    defaultRole: '未知角色',
+    openTime: '开通时间',
+    nowTime: '当前时间',
+    action: '操作',
+    show: '查看',
+    showRole: '角色',
+    remove: '删除'
   }
 }

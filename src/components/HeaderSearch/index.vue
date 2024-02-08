@@ -91,13 +91,13 @@ watch(isShow, val => {
 
 const headerSearchSelectRef = ref(null)
 const onClose = () => {
-  headerSearchSelectRef.value.blur()
+  headerSearchSelectRef.value && headerSearchSelectRef.value.blur()
+  isShow.value = false
+  searchOptions.value = []
 }
 
 const onSelectChange = val => {
   router.push(val.path)
-  isShow.value = false
-  searchOptions.value = []
 }
 
 watchSwitchLang(() => {
