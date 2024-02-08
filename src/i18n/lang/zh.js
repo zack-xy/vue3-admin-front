@@ -104,5 +104,9 @@ export default {
     show: '查看',
     showRole: '角色',
     remove: '删除'
+  },
+  uploadExcel: {
+    upload: '上传',
+    drop: '将文件拖到此处'
   }
 }

@@ -1,11 +1,9 @@
 <template>
-  <div>
-    导入
-  </div>
+  <upload-excel></upload-excel>
 </template>
 
 <script setup>
-
+import UploadExcel from '@/components/UploadExcel'
 </script>
 
 <style lang="scss" scoped>

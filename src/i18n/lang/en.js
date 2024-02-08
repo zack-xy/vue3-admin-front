@@ -102,5 +102,9 @@ export default {
     show: 'show',
     showRole: 'show role',
     remove: 'remove'
+  },
+  uploadExcel: {
+    upload: 'upload',
+    drop: 'drop file'
   }
 }

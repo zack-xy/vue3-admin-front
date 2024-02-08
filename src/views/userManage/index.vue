@@ -2,7 +2,7 @@
   <div class="user-manage-container">
     <el-card class="header">
       <div>
-        <el-button type="primary">{{$t('msg.excel.importExcel')}}</el-button>
+        <el-button type="primary" @click="handleImportExcel">{{$t('msg.excel.importExcel')}}</el-button>
         <el-button type="success">{{$t('msg.excel.exportExcel')}}</el-button>
       </div>
     </el-card>
@@ -51,6 +51,7 @@
 import { ref } from 'vue'
 import { getUserManageList } from '@/api/user-manage'
 import { watchSwitchLang } from '@/utils/i18n'
+import { useRouter } from 'vue-router'
 
 const tableData = ref([])
 const total = ref(0)
@@ -75,6 +76,12 @@ const handleSizeChange = () => {
 }
 const handleCurrentChange = () => {
 
+}
+
+// Excel导入
+const router = useRouter()
+const handleImportExcel = () => {
+  router.push('/user/import')
 }
 
 getListData()
