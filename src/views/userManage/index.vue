@@ -3,7 +3,7 @@
     <el-card class="header">
       <div>
         <el-button type="primary" @click="handleImportExcel">{{$t('msg.excel.importExcel')}}</el-button>
-        <el-button type="success">{{$t('msg.excel.exportExcel')}}</el-button>
+        <el-button type="success" @click="handleExportExcel">{{$t('msg.excel.exportExcel')}}</el-button>
       </div>
     </el-card>
     <el-card>
@@ -44,6 +44,8 @@
       </el-table>
       <el-pagination class="pagination" @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="page" :page-size="size" :page-sizes="[5, 10, 30, 100, 200]" layout="total, sizes, pager, prev, next, jumper" :total="total"></el-pagination>
     </el-card>
+
+    <export-to-excel v-model="exportToExcelVisible"></export-to-excel>
   </div>
 </template>
 
@@ -55,6 +57,7 @@ import { useRouter } from 'vue-router'
 import { ElMessageBox } from 'element-plus'
 import { useI18n } from 'vue-i18n'
 import { showMessage } from '@/utils/tools'
+import ExportToExcel from './components/Export2Excel'
 
 const i18n = useI18n()
 
@@ -103,6 +106,12 @@ const handleCurrentChange = currentPage => {
 const router = useRouter()
 const handleImportExcel = () => {
   router.push('/user/import')
+}
+
+// Excel导出
+const exportToExcelVisible = ref(false)
+const handleExportExcel = () => {
+  exportToExcelVisible.value = true
 }
 
 getListData()

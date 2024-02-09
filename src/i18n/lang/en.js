@@ -103,7 +103,12 @@ export default {
     showRole: 'show role',
     remove: 'remove',
     importSuccess: 'import success',
-    dialogTitle1: 'cofirm delete '
+    dialogTitle1: 'cofirm delete ',
+    title: 'Export Data',
+    placeholder: 'excel file name',
+    close: 'close',
+    confirm: 'confirm',
+    defaultName: 'user list'
   },
   uploadExcel: {
     upload: 'upload',

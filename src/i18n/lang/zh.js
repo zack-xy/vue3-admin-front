@@ -105,7 +105,12 @@ export default {
     showRole: '角色',
     remove: '删除',
     importSuccess: '条，导入成功',
-    dialogTitle1: '确定删除 '
+    dialogTitle1: '确定删除 ',
+    title: '导出数据',
+    placeholder: 'excel文件名',
+    close: '关闭',
+    confirm: '确认',
+    defaultName: '员工管理表'
   },
   uploadExcel: {
     upload: '上传',
