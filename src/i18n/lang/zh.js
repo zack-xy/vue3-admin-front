@@ -104,7 +104,8 @@ export default {
     show: '查看',
     showRole: '角色',
     remove: '删除',
-    importSuccess: '条，导入成功'
+    importSuccess: '条，导入成功',
+    dialogTitle1: '确定删除 '
   },
   uploadExcel: {
     upload: '上传',

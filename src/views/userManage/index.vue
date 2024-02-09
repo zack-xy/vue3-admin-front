@@ -38,7 +38,7 @@
           <template #default="{row}">
             <el-button type="primary" size="small" @click="handleShow(row)">{{$t('msg.excel.show')}}</el-button>
             <el-button type="info" size="small">{{$t('msg.excel.showRole')}}</el-button>
-            <el-button type="danger" size="small">{{$t('msg.excel.remove')}}</el-button>
+            <el-button type="danger" size="small" @click="handleDelete(row)">{{$t('msg.excel.remove')}}</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -48,10 +48,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { getUserManageList } from '@/api/user-manage'
+import { ref, onActivated } from 'vue'
+import { getUserManageList, deleteUser } from '@/api/user-manage'
 import { watchSwitchLang } from '@/utils/i18n'
 import { useRouter } from 'vue-router'
+import { ElMessageBox } from 'element-plus'
+import { useI18n } from 'vue-i18n'
+import { showMessage } from '@/utils/tools'
+
+const i18n = useI18n()
 
 const tableData = ref([])
 const total = ref(0)
@@ -71,11 +76,27 @@ const handleShow = (row) => {
 
 }
 
-const handleSizeChange = () => {
-
+const handleDelete = row => {
+  ElMessageBox.confirm(
+    i18n.t('msg.excel.dialogTitle1') + row.userName + '?',
+    'Warning',
+    {
+      type: 'warning'
+    }
+  ).then(async () => {
+    await deleteUser(row.id)
+    showMessage('已删除', 'success')
+    getListData()
+  })
 }
-const handleCurrentChange = () => {
 
+const handleSizeChange = currentSize => {
+  size.value = currentSize
+  getListData()
+}
+const handleCurrentChange = currentPage => {
+  page.value = currentPage
+  getListData()
 }
 
 // Excel导入
@@ -85,8 +106,8 @@ const handleImportExcel = () => {
 }
 
 getListData()
-
 watchSwitchLang(getListData)
+onActivated(getListData) // 导入Excel文件后，页面keep-alive重新激活
 </script>
 
 <style lang="scss" scoped>

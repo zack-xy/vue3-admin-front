@@ -102,7 +102,8 @@ export default {
     show: 'show',
     showRole: 'show role',
     remove: 'remove',
-    importSuccess: 'import success'
+    importSuccess: 'import success',
+    dialogTitle1: 'cofirm delete '
   },
   uploadExcel: {
     upload: 'upload',
