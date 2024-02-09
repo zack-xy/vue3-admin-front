@@ -101,7 +101,8 @@ export default {
     action: 'action',
     show: 'show',
     showRole: 'show role',
-    remove: 'remove'
+    remove: 'remove',
+    importSuccess: 'import success'
   },
   uploadExcel: {
     upload: 'upload',
