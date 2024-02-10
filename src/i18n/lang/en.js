@@ -129,5 +129,12 @@ export default {
     major: 'major',
     glory: 'glory',
     foot: 'sign:_________________  date:______________'
+  },
+  role: {
+    index: 'index',
+    name: 'name',
+    desc: 'description',
+    action: 'action',
+    assignPermissions: 'assign permissions'
   }
 }

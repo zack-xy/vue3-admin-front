@@ -131,5 +131,12 @@ export default {
     major: '专业',
     glory: '荣誉',
     foot: '签字：_____________     日期：______________'
+  },
+  role: {
+    index: '序号',
+    name: '名称',
+    desc: '描述',
+    action: '操作',
+    assignPermissions: '分配权限'
   }
 }
