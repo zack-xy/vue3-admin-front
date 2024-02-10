@@ -113,5 +113,21 @@ export default {
   uploadExcel: {
     upload: 'upload',
     drop: 'drop file'
+  },
+  userInfo: {
+    print: 'print',
+    title: 'user info',
+    name: 'name',
+    sex: 'sex',
+    nation: 'nation',
+    mobile: 'mobile',
+    province: 'province',
+    date: 'date',
+    remark: 'remark',
+    address: 'address',
+    experience: 'experience',
+    major: 'major',
+    glory: 'glory',
+    foot: 'sign:_________________  date:______________'
   }
 }

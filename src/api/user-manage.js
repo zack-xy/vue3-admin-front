@@ -13,3 +13,6 @@ export const userBatchImport = data => postRequest('/user-manage/batch/import', 
 
 // 删除用户
 export const deleteUser = id => postRequest('/user-manage/delete', { id })
+
+// 获取用户详情
+export const getUserDetail = id => postRequest('/user-manage/detail', { id })

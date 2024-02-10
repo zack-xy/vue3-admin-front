@@ -76,7 +76,7 @@ const getListData = async () => {
 }
 
 const handleShow = (row) => {
-
+  router.push(`/user/info/${row.id}`)
 }
 
 const handleDelete = row => {

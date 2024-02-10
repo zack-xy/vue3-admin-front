@@ -85,6 +85,7 @@ const privateRoutes = [
         path: '/user/info/:id',
         name: 'userInfo',
         component: () => import('@/views/userInfo/index'),
+        props: true, // 路由传递参数作为组件参数传入
         meta: {
           title: 'userInfo',
           icon: 'user-info'

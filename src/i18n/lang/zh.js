@@ -115,5 +115,21 @@ export default {
   uploadExcel: {
     upload: '上传',
     drop: '将文件拖到此处'
+  },
+  userInfo: {
+    print: '打印',
+    title: '员工信息',
+    name: '用户姓名',
+    sex: '性别',
+    nation: '民族',
+    mobile: '手机号',
+    province: '居住地',
+    date: '入职时间',
+    remark: '备注',
+    address: '联系地址',
+    experience: '经历',
+    major: '专业',
+    glory: '荣誉',
+    foot: '签字：_____________     日期：______________'
   }
 }
