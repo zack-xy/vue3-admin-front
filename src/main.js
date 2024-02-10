@@ -10,11 +10,14 @@ import installElement from '@/plugins/elements'
 import './permission'
 // 全局属性
 import installFilter from '@/filter'
+// 指令
+import installDirective from '@/directives'
 
 const app = createApp(App)
 installIcons(app)
 installElement(app)
 installFilter(app)
+installDirective(app)
 app.use(store)
   .use(router)
   .use(i18n)

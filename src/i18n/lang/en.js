@@ -101,6 +101,33 @@ export default {
     action: 'action',
     show: 'show',
     showRole: 'show role',
-    remove: 'remove'
+    remove: 'remove',
+    importSuccess: 'import success',
+    dialogTitle1: 'cofirm delete ',
+    title: 'Export Data',
+    placeholder: 'excel file name',
+    close: 'close',
+    confirm: 'confirm',
+    defaultName: 'user list'
+  },
+  uploadExcel: {
+    upload: 'upload',
+    drop: 'drop file'
+  },
+  userInfo: {
+    print: 'print',
+    title: 'user info',
+    name: 'name',
+    sex: 'sex',
+    nation: 'nation',
+    mobile: 'mobile',
+    province: 'province',
+    date: 'date',
+    remark: 'remark',
+    address: 'address',
+    experience: 'experience',
+    major: 'major',
+    glory: 'glory',
+    foot: 'sign:_________________  date:______________'
   }
 }

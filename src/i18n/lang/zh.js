@@ -103,6 +103,33 @@ export default {
     action: '操作',
     show: '查看',
     showRole: '角色',
-    remove: '删除'
+    remove: '删除',
+    importSuccess: '条，导入成功',
+    dialogTitle1: '确定删除 ',
+    title: '导出数据',
+    placeholder: 'excel文件名',
+    close: '关闭',
+    confirm: '确认',
+    defaultName: '员工管理表'
+  },
+  uploadExcel: {
+    upload: '上传',
+    drop: '将文件拖到此处'
+  },
+  userInfo: {
+    print: '打印',
+    title: '员工信息',
+    name: '用户姓名',
+    sex: '性别',
+    nation: '民族',
+    mobile: '手机号',
+    province: '居住地',
+    date: '入职时间',
+    remark: '备注',
+    address: '联系地址',
+    experience: '经历',
+    major: '专业',
+    glory: '荣誉',
+    foot: '签字：_____________     日期：______________'
   }
 }

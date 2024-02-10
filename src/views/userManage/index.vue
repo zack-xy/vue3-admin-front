@@ -2,8 +2,8 @@
   <div class="user-manage-container">
     <el-card class="header">
       <div>
-        <el-button type="primary">{{$t('msg.excel.importExcel')}}</el-button>
-        <el-button type="success">{{$t('msg.excel.exportExcel')}}</el-button>
+        <el-button type="primary" @click="handleImportExcel">{{$t('msg.excel.importExcel')}}</el-button>
+        <el-button type="success" @click="handleExportExcel">{{$t('msg.excel.exportExcel')}}</el-button>
       </div>
     </el-card>
     <el-card>
@@ -38,19 +38,28 @@
           <template #default="{row}">
             <el-button type="primary" size="small" @click="handleShow(row)">{{$t('msg.excel.show')}}</el-button>
             <el-button type="info" size="small">{{$t('msg.excel.showRole')}}</el-button>
-            <el-button type="danger" size="small">{{$t('msg.excel.remove')}}</el-button>
+            <el-button type="danger" size="small" @click="handleDelete(row)">{{$t('msg.excel.remove')}}</el-button>
           </template>
         </el-table-column>
       </el-table>
       <el-pagination class="pagination" @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="page" :page-size="size" :page-sizes="[5, 10, 30, 100, 200]" layout="total, sizes, pager, prev, next, jumper" :total="total"></el-pagination>
     </el-card>
+
+    <export-to-excel v-model="exportToExcelVisible"></export-to-excel>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { getUserManageList } from '@/api/user-manage'
+import { ref, onActivated } from 'vue'
+import { getUserManageList, deleteUser } from '@/api/user-manage'
 import { watchSwitchLang } from '@/utils/i18n'
+import { useRouter } from 'vue-router'
+import { ElMessageBox } from 'element-plus'
+import { useI18n } from 'vue-i18n'
+import { showMessage } from '@/utils/tools'
+import ExportToExcel from './components/Export2Excel'
+
+const i18n = useI18n()
 
 const tableData = ref([])
 const total = ref(0)
@@ -67,19 +76,47 @@ const getListData = async () => {
 }
 
 const handleShow = (row) => {
-
+  router.push(`/user/info/${row.id}`)
 }
 
-const handleSizeChange = () => {
-
+const handleDelete = row => {
+  ElMessageBox.confirm(
+    i18n.t('msg.excel.dialogTitle1') + row.userName + '?',
+    'Warning',
+    {
+      type: 'warning'
+    }
+  ).then(async () => {
+    await deleteUser(row.id)
+    showMessage('已删除', 'success')
+    getListData()
+  })
 }
-const handleCurrentChange = () => {
 
+const handleSizeChange = currentSize => {
+  size.value = currentSize
+  getListData()
+}
+const handleCurrentChange = currentPage => {
+  page.value = currentPage
+  getListData()
+}
+
+// Excel导入
+const router = useRouter()
+const handleImportExcel = () => {
+  router.push('/user/import')
+}
+
+// Excel导出
+const exportToExcelVisible = ref(false)
+const handleExportExcel = () => {
+  exportToExcelVisible.value = true
 }
 
 getListData()
-
 watchSwitchLang(getListData)
+onActivated(getListData) // 导入Excel文件后，页面keep-alive重新激活
 </script>
 
 <style lang="scss" scoped>
