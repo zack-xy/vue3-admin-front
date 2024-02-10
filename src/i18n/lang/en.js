@@ -108,7 +108,8 @@ export default {
     placeholder: 'excel file name',
     close: 'close',
     confirm: 'confirm',
-    defaultName: 'user list'
+    defaultName: 'user list',
+    roleDialogTitle: 'add role'
   },
   uploadExcel: {
     upload: 'upload',
@@ -135,6 +136,12 @@ export default {
     name: 'name',
     desc: 'description',
     action: 'action',
-    assignPermissions: 'assign permissions'
+    assignPermissions: 'assign permissions',
+    updateRoleSuccess: 'update role success'
+  },
+  permission: {
+    name: 'name',
+    mark: 'mark',
+    desc: 'description'
   }
 }

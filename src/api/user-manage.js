@@ -16,3 +16,9 @@ export const deleteUser = id => postRequest('/user-manage/delete', { id })
 
 // 获取用户详情
 export const getUserDetail = id => postRequest('/user-manage/detail', { id })
+
+// 获取指定用户的角色
+export const userRoles = id => postRequest('/user-manage/role', { id })
+
+// 用户分配角色
+export const updateRole = data => postRequest('/user-manage/role/change', data)

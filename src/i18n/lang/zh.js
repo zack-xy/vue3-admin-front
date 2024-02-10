@@ -110,7 +110,8 @@ export default {
     placeholder: 'excel文件名',
     close: '关闭',
     confirm: '确认',
-    defaultName: '员工管理表'
+    defaultName: '员工管理表',
+    roleDialogTitle: '分配角色'
   },
   uploadExcel: {
     upload: '上传',
@@ -137,6 +138,12 @@ export default {
     name: '名称',
     desc: '描述',
     action: '操作',
-    assignPermissions: '分配权限'
+    assignPermissions: '分配权限',
+    updateRoleSuccess: '更新角色成功'
+  },
+  permission: {
+    name: '权限名称',
+    mark: '权限标识',
+    desc: '权限描述'
   }
 }
