@@ -12,10 +12,6 @@ export default {
     3.Test configurable account: test <br />
     The uniform password is：123456 <br />
     <br />
-    Import user account： <br />
-    You can log in with the imported username <br />
-    The password is unified as：123456 <br />
-    <b>Note: Import user-discriminatory Chinese and English libraries!</b>
     `
   },
   route: {
