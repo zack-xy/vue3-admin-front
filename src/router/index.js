@@ -87,8 +87,7 @@ const privateRoutes = [
         component: () => import('@/views/userInfo/index'),
         props: true, // 路由传递参数作为组件参数传入
         meta: {
-          title: 'userInfo',
-          icon: 'user-info'
+          title: 'userInfo'
         }
       },
       {
@@ -96,8 +95,7 @@ const privateRoutes = [
         name: 'import',
         component: () => import('@/views/import/index'),
         meta: {
-          title: 'excelImport',
-          icon: 'excel-import'
+          title: 'excelImport'
         }
       }
     ]
