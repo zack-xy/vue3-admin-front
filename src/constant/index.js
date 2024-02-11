@@ -1,4 +1,5 @@
 export const TOKEN = 'token'
+export const USERNAME = 'userName'
 // Token时间戳
 export const TIME_STAMP = 'timeStamp'
 // 超时时长(30分钟的ms值)

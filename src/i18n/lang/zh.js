@@ -12,10 +12,6 @@ export default {
     3.测试可配置账号: test <br />
     密码统一为：123456 <br />
     <br />
-    导入用户账号： <br />
-    可使用导入的用户名登陆 <br />
-    密码统一为：123456 <br />
-    <b>注意：导入用户区分中英文库！</b>
     `
   },
   route: {
@@ -110,7 +106,8 @@ export default {
     placeholder: 'excel文件名',
     close: '关闭',
     confirm: '确认',
-    defaultName: '员工管理表'
+    defaultName: '员工管理表',
+    roleDialogTitle: '分配角色'
   },
   uploadExcel: {
     upload: '上传',
@@ -131,5 +128,19 @@ export default {
     major: '专业',
     glory: '荣誉',
     foot: '签字：_____________     日期：______________'
+  },
+  role: {
+    index: '序号',
+    name: '名称',
+    desc: '描述',
+    action: '操作',
+    assignPermissions: '分配权限',
+    updateRoleSuccess: '更新角色成功',
+    updatePermissionSuccess: '更新权限成功'
+  },
+  permission: {
+    name: '权限名称',
+    mark: '权限标识',
+    desc: '权限描述'
   }
 }

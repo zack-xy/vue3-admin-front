@@ -2,7 +2,7 @@
   <div class="user-manage-container">
     <el-card class="header">
       <div>
-        <el-button type="primary" @click="handleImportExcel">{{$t('msg.excel.importExcel')}}</el-button>
+        <el-button type="primary" v-permission="['importUser']" @click="handleImportExcel">{{$t('msg.excel.importExcel')}}</el-button>
         <el-button type="success" @click="handleExportExcel">{{$t('msg.excel.exportExcel')}}</el-button>
       </div>
     </el-card>
@@ -37,8 +37,8 @@
         <el-table-column :label="$t('msg.excel.action')" fixed="right" width="250">
           <template #default="{row}">
             <el-button type="primary" size="small" @click="handleShow(row)">{{$t('msg.excel.show')}}</el-button>
-            <el-button type="info" size="small">{{$t('msg.excel.showRole')}}</el-button>
-            <el-button type="danger" size="small" @click="handleDelete(row)">{{$t('msg.excel.remove')}}</el-button>
+            <el-button type="info" size="small" v-permission="['distributeRole']" @click="handleRole(row)">{{$t('msg.excel.showRole')}}</el-button>
+            <el-button type="danger" size="small" v-permission="['removeUser']" @click="handleDelete(row)">{{$t('msg.excel.remove')}}</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -46,11 +46,12 @@
     </el-card>
 
     <export-to-excel v-model="exportToExcelVisible"></export-to-excel>
+    <roles-dialog v-model="rolesDialogVisible" :userId="selectUserId" @updateRole="getListData"></roles-dialog>
   </div>
 </template>
 
 <script setup>
-import { ref, onActivated } from 'vue'
+import { ref, onActivated, watch } from 'vue'
 import { getUserManageList, deleteUser } from '@/api/user-manage'
 import { watchSwitchLang } from '@/utils/i18n'
 import { useRouter } from 'vue-router'
@@ -58,6 +59,7 @@ import { ElMessageBox } from 'element-plus'
 import { useI18n } from 'vue-i18n'
 import { showMessage } from '@/utils/tools'
 import ExportToExcel from './components/Export2Excel'
+import rolesDialog from './components/rolesDialog'
 
 const i18n = useI18n()
 
@@ -113,6 +115,17 @@ const exportToExcelVisible = ref(false)
 const handleExportExcel = () => {
   exportToExcelVisible.value = true
 }
+
+const rolesDialogVisible = ref(false)
+const selectUserId = ref('')
+const handleRole = (row) => {
+  rolesDialogVisible.value = true
+  selectUserId.value = row.id
+}
+
+watch(rolesDialogVisible, val => {
+  if (!val) selectUserId.value = ''
+})
 
 getListData()
 watchSwitchLang(getListData)

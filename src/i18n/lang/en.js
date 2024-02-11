@@ -12,10 +12,6 @@ export default {
     3.Test configurable account: test <br />
     The uniform password is：123456 <br />
     <br />
-    Import user account： <br />
-    You can log in with the imported username <br />
-    The password is unified as：123456 <br />
-    <b>Note: Import user-discriminatory Chinese and English libraries!</b>
     `
   },
   route: {
@@ -108,7 +104,8 @@ export default {
     placeholder: 'excel file name',
     close: 'close',
     confirm: 'confirm',
-    defaultName: 'user list'
+    defaultName: 'user list',
+    roleDialogTitle: 'add role'
   },
   uploadExcel: {
     upload: 'upload',
@@ -129,5 +126,19 @@ export default {
     major: 'major',
     glory: 'glory',
     foot: 'sign:_________________  date:______________'
+  },
+  role: {
+    index: 'index',
+    name: 'name',
+    desc: 'description',
+    action: 'action',
+    assignPermissions: 'assign permissions',
+    updateRoleSuccess: 'update role success',
+    updatePermissionSuccess: 'update permission success'
+  },
+  permission: {
+    name: 'name',
+    mark: 'mark',
+    desc: 'description'
   }
 }
