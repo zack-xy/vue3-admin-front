@@ -139,7 +139,8 @@ export default {
     desc: '描述',
     action: '操作',
     assignPermissions: '分配权限',
-    updateRoleSuccess: '更新角色成功'
+    updateRoleSuccess: '更新角色成功',
+    updatePermissionSuccess: '更新权限成功'
   },
   permission: {
     name: '权限名称',

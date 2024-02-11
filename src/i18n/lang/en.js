@@ -137,7 +137,8 @@ export default {
     desc: 'description',
     action: 'action',
     assignPermissions: 'assign permissions',
-    updateRoleSuccess: 'update role success'
+    updateRoleSuccess: 'update role success',
+    updatePermissionSuccess: 'update permission success'
   },
   permission: {
     name: 'name',
