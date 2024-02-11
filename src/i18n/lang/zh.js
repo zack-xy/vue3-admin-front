@@ -152,6 +152,8 @@ export default {
     action: '操作',
     show: '查看',
     delete: '删除',
-    dynamicTitle: '动态展示'
+    dynamicTitle: '动态展示',
+    time: '时间',
+    edit: '编辑'
   }
 }

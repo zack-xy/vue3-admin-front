@@ -33,10 +33,13 @@
 </template>
 
 <script setup>
-import { ref, onActivated } from 'vue'
+import { ref, onActivated, onMounted, nextTick } from 'vue'
 import { getArticleList } from '@/api/article'
 import { watchSwitchLang } from '@/utils/i18n'
 import { dynamicData, selectDynamicLabel, tableColumns } from './dynamic'
+import { tableRef, initSortable } from './sortable'
+import { showMessage } from '@/utils/tools'
+import { useRouter } from 'vue-router'
 
 const tableData = ref([])
 const page = ref(1)
@@ -52,12 +55,13 @@ const getListData = async () => {
   total.value = resTotal
 }
 
+const router = useRouter()
 const handleShow = row => {
-
+  router.push(`/article/${row.id}`)
 }
 
 const handleDelete = row => {
-
+  showMessage('删除文章')
 }
 
 const handleSizeChange = currentSize => {
@@ -72,6 +76,11 @@ const handleCurrentChange = currentPage => {
 getListData()
 watchSwitchLang(getListData)
 onActivated(getListData)
+
+onMounted(async () => {
+  await nextTick()
+  initSortable()
+})
 </script>
 
 <style lang="scss" scoped>
@@ -92,10 +101,15 @@ onActivated(getListData)
   ::v-deep .el-table__row {
     cursor: pointer;
   }
-
   .pagination {
     margin-top: 20px;
     justify-content: center;
   }
+}
+
+::v-deep .sortable-ghost {
+  opacity: 0.6;
+  color: #fff;
+  background: #300003;
 }
 </style>

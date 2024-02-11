@@ -44,6 +44,9 @@ dependencies:
   screenfull:
     specifier: ^6.0.2
     version: 6.0.2
+  sortablejs:
+    specifier: 1.14.0
+    version: 1.14.0
   vue:
     specifier: ^3.2.13
     version: 3.3.4
@@ -8796,6 +8799,10 @@ packages:
       uuid: 8.3.2
       websocket-driver: 0.7.4
     dev: true
+
+  /sortablejs@1.14.0:
+    resolution: {integrity: sha512-pBXvQCs5/33fdN1/39pPL0NZF20LeRbLQ5jtnheIPN9JQAaufGjKdWduZn4U7wCtVuzKhmRkI0DFYHYRbB2H1w==}
+    dev: false
 
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}

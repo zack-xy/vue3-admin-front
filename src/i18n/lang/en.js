@@ -150,6 +150,8 @@ export default {
     action: 'action',
     show: 'show',
     delete: 'delete',
-    dynamicTitle: 'dynamic title'
+    dynamicTitle: 'dynamic title',
+    time: 'time',
+    edit: 'edit'
   }
 }
