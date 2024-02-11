@@ -140,5 +140,18 @@ export default {
     name: 'name',
     mark: 'mark',
     desc: 'description'
+  },
+  article: {
+    ranking: 'ranking',
+    title: 'title',
+    author: 'author',
+    publishDate: 'publish date',
+    desc: 'description',
+    action: 'action',
+    show: 'show',
+    delete: 'delete',
+    dynamicTitle: 'dynamic title',
+    time: 'time',
+    edit: 'edit'
   }
 }

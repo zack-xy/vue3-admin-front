@@ -142,5 +142,18 @@ export default {
     name: '权限名称',
     mark: '权限标识',
     desc: '权限描述'
+  },
+  article: {
+    ranking: '排名',
+    title: '标题',
+    author: '作者',
+    publishDate: '发布时间',
+    desc: '内容简介',
+    action: '操作',
+    show: '查看',
+    delete: '删除',
+    dynamicTitle: '动态展示',
+    time: '时间',
+    edit: '编辑'
   }
 }
