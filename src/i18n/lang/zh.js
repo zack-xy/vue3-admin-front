@@ -154,6 +154,12 @@ export default {
     delete: '删除',
     dynamicTitle: '动态展示',
     time: '时间',
-    edit: '编辑'
+    edit: '编辑',
+
+    titlePlaceholder: '文章标题',
+    markdown: 'markdown',
+    richText: '富文本',
+    commit: '确定',
+    createSuccess: '文章已创建'
   }
 }

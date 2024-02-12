@@ -152,6 +152,12 @@ export default {
     delete: 'delete',
     dynamicTitle: 'dynamic title',
     time: 'time',
-    edit: 'edit'
+    edit: 'edit',
+
+    titlePlaceholder: 'title placeholder',
+    markdown: 'markdown',
+    richText: 'rich text',
+    commit: 'commit',
+    createSuccess: 'article created success'
   }
 }
